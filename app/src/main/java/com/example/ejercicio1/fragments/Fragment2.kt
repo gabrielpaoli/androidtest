@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ejercicio1.R
@@ -51,6 +52,8 @@ class Fragment2 : Fragment() {
 
     private fun onItemClick(index: Int) {
         Log.d("TAG", "message")
+        val action = Fragment2Directions.actionFragment2ToFragment3("SASA", "SUSU")
+        v.findNavController().navigate(action)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

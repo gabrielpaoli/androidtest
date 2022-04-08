@@ -21,5 +21,19 @@
         tools:layout="@layout/fragment2_fragment" >
         <argument android:name="nombreUsuario"
             app:argType="string" />
+        <action
+            android:id="@+id/action_fragment2_to_fragment3"
+            app:destination="@id/fragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.example.ejercicio1.fragments.Fragment3"
+        android:label="fragment3_fragment"
+        tools:layout="@layout/fragment3_fragment">
+        <argument
+            android:name="nombreProfesional"
+            app:argType="string" />
+        <argument android:name="apellidoProfesional"
+            app:argType="string" />
     </fragment>
 </navigation>
