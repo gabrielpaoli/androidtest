@@ -8,14 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.LiveData
 import androidx.navigation.findNavController
 import com.example.ejercicio1.R
-import com.example.ejercicio1.User
+import com.example.ejercicio1.entities.User
 import com.example.ejercicio1.viewmodels.Fragment1ViewModel
 import com.google.android.material.snackbar.Snackbar
-import org.w3c.dom.Text
 
 class Fragment1 : Fragment() {
 

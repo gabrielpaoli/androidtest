@@ -1,4 +1,4 @@
-package com.example.ejercicio1
+package com.example.ejercicio1.entities
 
 class User(
     val firstName: String,
