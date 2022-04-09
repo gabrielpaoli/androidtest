@@ -36,7 +36,7 @@ class Fragment2 : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        var saludo = "Bienvenido " + Fragment2Args.fromBundle(requireArguments()).nombreUsuario
+        val saludo = "Bienvenido " + Fragment2Args.fromBundle(requireArguments()).nombreUsuario
         welcomeText = v.findViewById(R.id.welcomeText)
         welcomeText.setText(saludo)
 
@@ -51,8 +51,10 @@ class Fragment2 : Fragment() {
     }
 
     private fun onItemClick(index: Int) {
-        Log.d("TAG", "message")
-        val action = Fragment2Directions.actionFragment2ToFragment3("SASA", "SUSU")
+        Log.d("TAG", index.toString())
+        val name = repository.getProfesionalePerIndex(index).firstName
+        val apellido = repository.getProfesionalePerIndex(index).lastName
+        val action = Fragment2Directions.actionFragment2ToFragment3(name, apellido)
         v.findNavController().navigate(action)
     }
 
